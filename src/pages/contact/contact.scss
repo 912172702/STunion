@@ -1,3 +1,103 @@
 page-contact {
+    .news-navbar{
 
+    }
+    .all-news-content{
+    }
+    .news-navbar-title{
+        width: 40%;
+        float: left;
+    }
+    .news-navbar-add{
+        float: right;
+        width: 10%;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .all-news-content{
+        background-color: #E8E8E8;
+        width: 100%;
+    }
+    .news-item{
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+        background-color: #F0FFFF;
+        height: auto;
+        border-radius: 5%;
+    }
+    .news-item textarea{
+        width: 100%;
+        background:#F0FFFF;
+        border-left: 0 solid;
+        border-right: 0 solid;
+        border-bottom: 0 solid;
+        border-top: 0 solid;
+    }
+    .new-item span{
+        float: left;
+    }
+    .header img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    .news-content{
+        position: relative;
+        top:-20px;
+    }
+    .user-name{
+        position: relative;
+        top:-20px;
+    }
+    .publish-time{
+        position: relative;
+        left: 40px;
+        top:-20px;
+        font-size: 12px;
+        color:#B5B5B5;
+    }
+    .identity{
+        position: relative;
+        top: -40px;
+        color:#B5B5B5;
+        font-size: 12px;
+        left:-20px;
+    }
+    .comment-icon{
+        float: right;
+        position: relative;
+        top: -20px;
+        left: -20px;
+    }
+    .news-footer input{
+        width: 80%;
+        height: 35px;
+        border-radius: 5%;
+        margin: 5px;
+        font-size: 15px;
+    }
+    .new-footer button{
+        width: 18%;
+        float: right;
+        margin-bottom: 5px;
+    }
+    .news-comment{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -20px;
+    }
+     .news-comment span{
+        color:#4876FF;
+     }
+     .news-comment p{
+        margin: 0;
+        font-size: 12px;
+     }
+    .news-comment-btn span{
+        position: relative;
+        top:-20px;
+        color:#B5B5B5;
+    }
 }

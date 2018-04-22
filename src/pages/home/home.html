@@ -1,17 +1,48 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+      <img (click)="toggleMenu()" class="face" src="{{getUserHeadIcon()}}">
+    <ion-title class="home-title">班级列表</ion-title>
   </ion-navbar>
+ <!--  <div style="position: absolute;top:5px;left:300px;">
+    <button ion-button small (click)="joinByfaceToface()">面对面加</button>
+    <button ion-button small (click)="joinByGroupId()">群号加</button>
+  </div> -->
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content all>
+  <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-button small outline (click)="joinByfaceToface()">附近</button>
+      <button ion-button small outline (click)="joinByGroupId()">群号</button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-list>
+    <ion-item (click)="goToCourse(c)" all class="join-ion-item" *ngFor="let c of courses" href="#">
+      <div class="join-item-headicon">
+        <img class="face" src="{{getCourseIcon(c)}}">
+      </div>
+      <div class="list-div-label">
+        <span class="list-label">{{c.cName}}</span><br>
+        <span class="list-number">(群号:{{c.cId}})</span>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<!-- 侧边 -->
+<ion-menu side="left" type="overlay" [content]="mycontent">
+  <ion-content style="background: url('assets/imgs/menuback.jpg');">
+    <ion-list class="mylist">
+      <ion-item style="height: 150px;" href="#">
+        <h1 style="color:white">{{user?user.tName:""}}</h1>
+        <ion-thumbnail item-start>
+          <img class="face" src="{{getUserHeadIcon()}}">
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item margin-top="50px" href="#" (click) ="myCourses()">
+        <ion-icon item-start name="md-question"></ion-icon>
+        <ion-label style="color:black" margin-left="10px">我的课程</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="TabsPage"></ion-nav>

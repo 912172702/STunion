@@ -1,0 +1,38 @@
+page-course {
+    .group-info-button{
+        float: left;
+        position: relative;
+        left: 200px;
+    }
+    .content-body{
+        background-color: #DCDCDC;
+    }
+    .float-item-div{
+      margin: 10px;
+      position: fixed;
+      z-index: 999;
+      width: 95%;
+      height: auto;
+      box-shadow: 10px 10px 5px #888888;
+      vertical-align: center;
+   }
+
+   .float-item{
+        border-radius: 2%;
+        background-color: #F5FFFA;
+        height: 100%;
+   }
+   .choose-answer li{
+    list-style-type: none;
+   }
+   .course-title{
+    width: 80%;
+    float: left;
+
+   }
+   .group-option-icon{
+    float: right;
+    margin-right: 16px;
+    font-size: 25px;
+   }
+}

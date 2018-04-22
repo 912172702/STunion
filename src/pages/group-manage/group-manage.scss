@@ -1,0 +1,63 @@
+page-group-manage {
+    .content-body{
+        background-color: #DCDCDC;
+    }
+    .content-body-div{
+        margin: 10px;
+    }
+    .student-grid{
+        background-color: #F5F5F5;
+        border-radius: 2%;
+    }
+    .student-grid-item{
+        vertical-align:center;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 18px;
+    }
+    .student-grid-item-icon{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    .student-grid-item-label{
+        text-align: center;
+        font-size: 10px;
+    }
+    .content-button{
+        margin-top: 5px;
+        height: 30px;
+        font-size: 15px;
+        background-color: #F5F5F5;
+        border-radius: 2%;
+    }
+    .content-destroy{
+        vertical-align: center;
+        width: 80%;
+        margin: 20px;
+    }
+
+    .content-button-head img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .content-button-head div{
+        float: left;
+    }
+    .content-button-head{
+        margin-bottom: 5px;
+        margin-top: 5px;
+        height: 80px;
+        font-size: 15px;
+        background-color: #F5F5F5;
+        border-radius: 2%;
+    }
+    .content-button-head-label{
+        width: 100px;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+}

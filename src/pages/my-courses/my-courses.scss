@@ -1,0 +1,37 @@
+page-my-courses {
+    table {
+        font-family: verdana, arial, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        width: 100%;
+        
+    }
+     table th {
+        border-width: 1px;
+        padding: 6px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+        text-align: center;
+        
+    }
+    table td {
+        border-width: 1px;
+        padding: 6px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .head-icon{
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+    }
+    button{
+        margin: 0;
+    }
+}

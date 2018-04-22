@@ -1,17 +1,63 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
+  <ion-navbar class="news-navbar">
+    <ion-title class="news-navbar-title">
+      校友圈
     </ion-title>
+    <ion-icon name="add" md="md-add"  class="news-navbar-add" (click)="addNews()"></ion-icon>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content all class="all-news-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="刷新...">
+    </ion-refresher-content>
+  </ion-refresher>
+      <div class="all-news"> 
+        <ion-list>
+          <div class="news-item" *ngFor = "let news of newses">
+              <!--学生-->
+              <div *ngIf="news.news.userType == 1">
+                <div class="header">
+                  <img [src]="getImgSrc(news.student.headIcon)"/>
+                  <span class="user-name">{{news.student.stuName}}</span><br>
+                  <span class="publish-time">{{news.news.publishTime}}</span>
+                  <span class="identity">(学生)</span>
+                </div>
+              </div>
+              <!--老师-->
+              <div *ngIf="news.news.userType == 2">
+                <div class="header">
+                  <img [src]="getImgSrc(news.teacher.headIcon)"/>
+                  <span class="user-name">{{news.teacher.tName}}</span><br>
+                  <span class="publish-time">{{news.news.publishTime}}</span>
+                  <span class="identity">(老师)</span>
+                </div>
+              </div>
+
+              <!--内容-->
+              <div class="news-content">
+                <p>{{news.news.content}}</p>
+              </div>
+              <div class="news-comment-btn">
+                <span>评论</span><ion-icon ios="ios-chatboxes" md="md-chatboxes" class="comment-icon" (click)="startComment(news)"></ion-icon>
+              </div>
+              <!--评论-->
+              <div class="news-comment">
+                  <p *ngFor="let comment of news.comments">
+                    <span>{{comment.username}}:</span>&nbsp;&nbsp;
+                    {{comment.comment.content}}
+                  </p>            
+              </div>
+          </div>
+        </ion-list>
+      </div>
 </ion-content>
+<ion-footer class="news-footer">
+  <div [style.display]="display">
+    <input #commentInput type="text" [(ngModel)] = "commentContent"><button ion-button small (click)="submitComment()">提交</button>
+  </div>
+</ion-footer>

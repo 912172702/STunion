@@ -1,0 +1,37 @@
+<!--
+  Generated template for the NotificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>通知</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>
+                班级: {{course.cName}}
+            </ion-label>
+        </ion-item>
+         <ion-item>
+            <ion-label>
+                时间: {{notification.createTime}}
+            </ion-label>
+        </ion-item>
+         <ion-item>
+            <ion-label>
+                内容:
+            </ion-label>
+        </ion-item>
+        <div class="node-content-div">
+             <textarea rows="10" readonly="true" [value] = "notification.content"></textarea>
+        </div>
+    </ion-list>
+</ion-content>

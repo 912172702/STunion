@@ -1,0 +1,59 @@
+<!--
+  Generated template for the CollRollPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>签到</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content all>
+    <ion-item class="head-div">
+        <div class="head-icon">
+            <img src="{{getHeadIconSrc()}}">
+        </div>
+        <div class="head-label">
+            <span class="head-label-span">你的考勤信息</span>
+        </div>
+    </ion-item>
+    <ion-item>
+        <div class="call-roll-table">
+            <table cellspacing="" border="1px">
+                <thead>
+                    <th>姓名</th>
+                    <th>出勤</th>
+                    <th>缺勤</th>
+                    <th>迟到</th>
+                    <th>请假</th>
+                    <th>状态</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{user.stuName}}</td>
+                        <td>{{attendStatus.attendCnt}}</td>
+                        <td>{{attendStatus.absenceCnt}}</td>
+                        <td>{{attendStatus.latCnt}}</td>
+                        <td>{{attendStatus.askForLeaveCnt}}</td>
+                        <td>
+                            <span *ngIf="status == 1" style="color: green">良好</span>
+                            <span *ngIf="status == 2" style="color: orange">警告</span>
+                            <span *ngIf="status == 3" style="color:red">特殊处理</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ion-item>
+    <ion-item href="#">
+        <ion-label>口令</ion-label>
+        <ion-input type="text" [(ngModel)] = "token"></ion-input>
+    </ion-item>
+    <ion-item>
+        <button ion-button block (click)="callRoll()">一键签到</button>
+    </ion-item>
+</ion-content>

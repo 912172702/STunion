@@ -1,0 +1,51 @@
+page-coll-roll {
+    .head-div{
+        height: 40px;
+    }
+    .head-icon {
+        float: left;
+        height: 40px;
+        width: 40px;
+    }
+    .head-icon img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .head-label {
+        height: 50px;
+        font-size: 13px;
+    }
+    .head-label-span {
+        position: relative;
+        top: 30%;
+    } 
+    //table
+    .call-roll-table{
+    }
+    .call-roll-table table {
+        font-family: verdana, arial, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+    }
+    .call-roll-table table th {
+        border-width: 1px;
+        padding: 6px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+        text-align: center;
+        
+    }
+    .call-roll-table table td {
+        border-width: 1px;
+        padding: 6px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+        text-align: center;
+    }
+}

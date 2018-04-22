@@ -1,0 +1,37 @@
+<!--
+  Generated template for the QuestionRangePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>得分排名</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content all>
+    <div class="content-div">
+        <table>
+            <thead>
+                <th></th>
+                <th>姓名</th>
+                <th>学号</th>
+                <th>分数</th>
+                <th>排名</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of students;let i=index">
+                    <td><img class="head-icon" [src]="getImgSrc(s.headIcon)"></td>
+                    <td>{{s.stuName}}</td>
+                    <td>{{s.stuNumber}}</td>
+                    <td>{{s.virtualScore}}</td>
+                    <td>{{i+1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ion-content>

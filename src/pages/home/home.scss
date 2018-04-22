@@ -1,3 +1,44 @@
 page-home {
+   .ion {
+      font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+   }
+   .face {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 10px;
+   }
+   .mylist {
+      filter: alpha(opacity=50);
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5;
+   }
 
+  .home-title{
+    float: right;
+    position: relative;
+    top: 8px;
+    left: -130px;
+  }
+    .list-div-label{
+        float: left;
+        width: 80%;
+        height: 100%;
+        margin-left: 10px;
+        margin-top: 3px;
+   }
+   .list-label{
+   }
+   
+   .list-number{
+        font-size: 12px;
+   }
+   .join-item-headicon{
+        float: left;
+   }
+   .join-ion-item{
+    width: 400px;
+   }
 }

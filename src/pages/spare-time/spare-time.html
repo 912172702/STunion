@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SpareTimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>spareTime</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content all>
+    <div class="table-top">
+        <span>空闲时间统计详情</span>
+    </div>
+    <div class="table-div">
+        <table>
+            <thead>
+                <th></th>
+                <th>周日</th>
+                <th>周一</th>
+                <th>周二</th>
+                <th>周三</th>
+                <th>周四</th>
+                <th>周五</th>
+                <th>周六</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let j of col">
+                    <th>
+                        第<br>{{j+1}}<br>节
+                    </th>
+                    <td *ngFor="let i of row" [style.backgroundColor]="getBackgroundColor(i,j)" (click) = "clickItem(i,j)">
+                        <span  *ngIf="courseTable[i] && courseTable[i][j] == 2" style="color: white">已选择</span>
+                        <span  *ngIf="courseTable[i] && courseTable[i][j] == 1">待选择</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ion-content>
+<ion-footer>
+    <button ion-button outline block color="salary" (click) = "submitSpare()">提交</button>
+</ion-footer>
+

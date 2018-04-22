@@ -1,0 +1,66 @@
+<!--
+  Generated template for the ShowMemberDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>学生信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content all>
+    <ion-item>
+        <img [src]="getHeadIconSrc()">
+    </ion-item>
+    <!---->
+    <ion-item href="#" class="detail-item">
+        <table>
+            <tr>
+                <td>姓名:</td>
+                <td>{{student.stuName}}</td>
+            </tr>
+        </table>                    
+    </ion-item>
+
+    <ion-item href="#" class="detail-item">
+        <table>
+            <tr>
+                <td>学号:</td>
+                <td>{{student.stuNumber}}</td>
+            </tr>
+        </table>                    
+    </ion-item>
+
+    <ion-item href="#" class="detail-item">
+        <table>
+            <tr>
+                <td>手机号:</td>
+                <td>{{student.stuTel}}</td>
+            </tr>
+        </table>                    
+    </ion-item>
+
+    <ion-item href="#" class="detail-item">
+        <table>
+            <tr>
+                <td>{{student.parentRelation}}电话:</td>
+                <td>{{student.parentTel}}</td>
+            </tr>
+        </table>                    
+    </ion-item>
+
+    <ion-item href="#" class="detail-item">
+        <table>
+            <tr>
+                <td>问答分数:</td>
+                <td>{{student.virtualScore}}分</td>
+            </tr>
+        </table>                    
+    </ion-item>
+
+</ion-content>
